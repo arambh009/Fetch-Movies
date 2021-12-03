@@ -35,22 +35,10 @@ function App() {
       setError(error.message);
       setIsLoading(false);
     }
-
-    
-    // fetch('https://swapi.dev/api/films/').then(response => {return response.json();})
-    // .then(data=>{
-    //   const transform=data.results.map(movieData=>{
-    //     return{
-    //       id:movieData.episode_id,
-    //       title:movieData.title,
-    //       openingText:movieData.opening_crawl,
-    //       releaseDate:movieData.release_date
-    //     }
-    //   })
-    //   setMovies(transform);
-    // })
   }
+
   let content=<p>No movies found</p>;
+  
   if(movies.length!==0){
     content=<MoviesList movies={movies} />;
   }
